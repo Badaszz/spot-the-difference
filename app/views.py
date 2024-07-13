@@ -89,7 +89,7 @@ def index():
 
         # Save generated images (if needed)
         cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_1.jpg'), result1)
-        cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_2.jpg'), result2)
+        cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_2.jpg'), result1)
 
         # Calculate number of differences
         p = len(cnts2)
