@@ -113,7 +113,6 @@ def index():
                 cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_2.jpg'), result2)
                 return render_template('index.html',pred=str(round(score*100,2)) + '%' + ' difficulty' + '\n' + p + 'difference' + 's'* c )
 
-	return render_template('index.html') 
        
 # Main function
 if __name__ == '__main__':
