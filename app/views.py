@@ -26,13 +26,16 @@ def index():
                 # Get uploaded image
                 file_upload = request.files['file_upload']
                 filename = file_upload.filename
+
+		file_upload2 = request.files['file_upload2']
+                filename2 = file_upload2.filename
                 
                 # Resize and save the uploaded image
-                uploaded_image = Image.open(fileName).resize((250,160))
+                uploaded_image = Image.open(file_upload).resize((250,160))
                 uploaded_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'uploaded_image.jpg'))
 
                 # Resize and save the original image to ensure both uploaded and original matches in size
-                original_image = Image.open(fileName2).resize((250,160))
+                original_image = Image.open(file_upload2).resize((250,160))
                 original_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'original_image.jpg'))
 
                 # Read uploaded and original image as array
