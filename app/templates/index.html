@@ -75,13 +75,13 @@
   <script type="text/javascript">
     document.getElementById('file_upload').onchange = function () {
       var fullPath = this.value;
-      var fileName = fullPath.split('\\').pop().split('/').pop();
-      document.getElementById('file_name').value = fileName;
+      var uploaded_image = fullPath.split('\\').pop().split('/').pop();
+      document.getElementById('file_name').value = uploaded_image;
     };
     document.getElementById('file_upload2').onchange = function () {
       var fullPath2 = this.value;
-      var fileName2 = fullPath2.split('\\').pop().split('/').pop();
-      document.getElementById('file_name2').value = fileName2;
+      var original_image = fullPath2.split('\\').pop().split('/').pop();
+      document.getElementById('file_name2').value = original_image;
     };
   </script>
 
