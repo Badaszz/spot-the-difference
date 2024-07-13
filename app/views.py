@@ -29,11 +29,11 @@ def index():
                 
                 # Resize and save the uploaded image
                 uploaded_image = Image.open(file_upload).resize((250,160))
-                uploaded_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image1.jpg'))
+                uploaded_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'uploaded_image.jpg'))
 
                 # Resize and save the original image to ensure both uploaded and original matches in size
                 original_image = Image.open(file_upload2).resize((250,160))
-                original_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image2.jpg'))
+                original_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'original_image.jpg'))
 
                 # Read uploaded and original image as array
                 original_image = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image2.jpg'))
