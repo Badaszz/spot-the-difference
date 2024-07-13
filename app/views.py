@@ -26,10 +26,10 @@ def index():
                 # Get uploaded image
                 file_upload = request.files['file_upload']
                 filename = file_upload.filename
-
+		
 		file_upload2 = request.files['file_upload2']
                 filename2 = file_upload2.filename
-                
+		
                 # Resize and save the uploaded image
                 uploaded_image = Image.open(file_upload).resize((250,160))
                 uploaded_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'uploaded_image.jpg'))
@@ -115,7 +115,7 @@ def index():
                 cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_1.jpg'), result1)
                 cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_2.jpg'), result2)
                 return render_template('index.html',pred=str(round(score*100,2)) + '%' + ' difficulty' + '\n' + p + 'difference' + 's'* c )
-
+		
 	return render_template('index.html')
 
        
