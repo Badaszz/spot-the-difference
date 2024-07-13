@@ -14,7 +14,7 @@
     <div class="nav-wrapper container">
       <a id="logo-container" class="brand-logo center"><h5>SPOT THE DIFFERENCE</h5></a>
       <div style="margin-left: 800px">
-      	   Made by <a class="orange-text text-lighten-3">BADASZ</a>
+        Made by <a class="orange-text text-lighten-3">BADASZ</a>
       </div>
     </div>
   </nav>
@@ -61,9 +61,9 @@
             <button type="submit" class="btn-large" style="background-color: #5e72e4">SPOT</button>
           </div>
         </form>
-       	<div style="text-align: center; padding-top: 50px">
-      		<h5>pred</h5>
-     	</div>
+        <div style="text-align: center; padding-top: 50px">
+          <h5>pred</h5>
+        </div>
 
       </div>
       <br><br>
@@ -75,17 +75,16 @@
   <script type="text/javascript">
     document.getElementById('file_upload').onchange = function () {
       var fullPath = this.value;
-      var file_upload = fullPath.split('\\').pop().split('/').pop();
-      document.getElementById('file_name').value = file_upload;
+      var fileName = fullPath.split('\\').pop().split('/').pop();
+      document.getElementById('file_name').value = fileName;
     };
     document.getElementById('file_upload2').onchange = function () {
       var fullPath2 = this.value;
-      var file_upload2 = fullPath2.split('\\').pop().split('/').pop();
-      document.getElementById('file_name2').value = file_upload2;
+      var fileName2 = fullPath2.split('\\').pop().split('/').pop();
+      document.getElementById('file_name2').value = fileName2;
     };
   </script>
 
 </body>
 </html>
-
 
