@@ -98,7 +98,7 @@ def index():
         # Return result to template
         return render_template('index.html', pred=f"{round(score * 100, 2)}% difficulty\n{p} difference{'s' * c}")
 
-    return render_template('index.html')  # Default return for GET request
+    return render_template('index.html', pred=f"{round(score * 100, 2)}% difficulty\n{p} difference{'s' * c}")  # Default return for GET request
 
 # Main function
 if __name__ == '__main__':
