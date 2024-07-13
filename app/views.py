@@ -85,7 +85,7 @@ def index():
                 cv2.rectangle(uploaded_image, (x, y), (x + w, y + h), (255, 0, 0), 1)
 
         # Display images with rectangles highlighting differences
-        result2 = np.hstack((original_image, x, uploaded_image))
+        #result2 = np.hstack((original_image, x, uploaded_image))
 
         # Save generated images (if needed)
         cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_1.jpg'), result1)
