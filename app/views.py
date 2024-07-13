@@ -88,6 +88,7 @@ def index():
                 result1 = np.hstack((ioriginal_image, x, uploaded_image))
 
                 #draw contours on image
+		p = 0
 
 
                 for contour in cnts2:
@@ -97,7 +98,7 @@ def index():
                         # Draw rectangle - bounding box on both images
                         cv2.rectangle(img3, (x, y), (x+w, y+h), (255,0,0), 1)
                         cv2.rectangle(img4, (x, y), (x+w, y+h), (255,0,0), 1)
-                        p+ = 1
+                        p += 1
 
                 # Show images with rectangles on differences
                 x = np.zeros((img_height,10,3), np.uint8)
