@@ -28,20 +28,20 @@ def index():
                 filename = file_upload.filename
                 
                 # Resize and save the uploaded image
-                uploaded_image = Image.open(file_upload).resize((250,160))
+                uploaded_image = Image.open(fileName).resize((250,160))
                 uploaded_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'uploaded_image.jpg'))
 
                 # Resize and save the original image to ensure both uploaded and original matches in size
-                original_image = Image.open(file_upload2).resize((250,160))
+                original_image = Image.open(fileName2).resize((250,160))
                 original_image.save(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'original_image.jpg'))
 
                 # Read uploaded and original image as array
-                original_image = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image2.jpg'))
-                uploaded_image = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image1.jpg'))
+                original_image = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'original_image.jpg'))
+                uploaded_image = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'uploaded_image.jpg'))
 
                 #extra images for second parameter 
-                img3 = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image2.jpg'))
-                img4 = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'image1.jpg'))
+                img3 = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'original_image.jpg'))
+                img4 = cv2.imread(os.path.join(app.config['INITIAL_FILE_UPLOADS'], 'uploaded_image.jpg'))
 
                 #setting height 
                 img_height = original_image.shape[0]
