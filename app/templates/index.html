@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+        /* Set display to none for image*/
+        #image {
+            display: none;
+        }
+  </style>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>SPOT THE DIFFERENCE</title>
@@ -58,13 +64,17 @@
           </div>
     
           <div class="row center">
-            <button type="submit" class="btn-large" style="background-color: #5e72e4">SPOT</button>
+            <button type="submit" class="btn-large" onclick="show()" id="bttn" style="background-color: #5e72e4">SPOT</button>
           </div>
         </form>
         <div style="text-align: center; padding-top: 50px">
           <h5>pred</h5>
         </div>
-
+        <div>
+          <img id="image" 
+             src="static/generated/image_differences_1.jpg"
+             alt="GFG image" />
+        </div>
       </div>
       <br><br>
     </div>
@@ -83,8 +93,15 @@
       var fileName2 = fullPath2.split('\\').pop().split('/').pop();
       document.getElementById('file_name2').value = fileName2;
     };
+    function show() {
+            /* Access image by id and change 
+            the display property to block*/
+            document.getElementById('image')
+                .style.display = "block";
+            document.getElementById('bttn')
+                .style.display = "none";
+        }
   </script>
 
 </body>
 </html>
-
