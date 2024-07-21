@@ -84,7 +84,7 @@ def index():
         # Return result to template
         return render_template('index.html')#, pred=str(round(score * 100, 2)) + '% similarity')
 
-    #return render_template('index.html')  # Default return for GET request
+    return render_template('index.html')  # Default return for GET request
 
 # Main function
 if __name__ == '__main__':
