@@ -23,11 +23,12 @@ def index():
     # Execute if request is POST
     if request.method == "POST":
         # Get uploaded images
-        file_upload = request.files['file_upload']
         filename = file_upload.filename
-
-        file_upload2 = request.files['file_upload2']
+        file_upload = request.files['file_upload']
+        
         filename2 = file_upload2.filename
+        file_upload2 = request.files['file_upload2']
+        
 
         # Resize and save the uploaded image
         uploaded_image = Image.open(file_upload).resize((250, 160))
