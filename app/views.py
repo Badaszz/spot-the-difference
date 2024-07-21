@@ -82,9 +82,9 @@ def index():
         cv2.imwrite(os.path.join(app.config['GENERATED_FILE'], 'image_differences_1.jpg'), result1)
 
         # Return result to template
-        return render_template('index.html', pred=str(round(score * 100, 2)) + '% similarity')
+        return render_template('index.html')#, pred=str(round(score * 100, 2)) + '% similarity')
 
-    return render_template('index.html')  # Default return for GET request
+    #return render_template('index.html')  # Default return for GET request
 
 # Main function
 if __name__ == '__main__':
